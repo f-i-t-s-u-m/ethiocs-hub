@@ -82,8 +82,8 @@ export function Contact() {
             Initiate Connection
           </h2>
           <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto">
-            Ready to sync with the future? Let's establish a quantum link to
-            your perfect workspace experience.
+            Ready to sync with the future? Let&apos;s establish a quantum link
+            to your perfect workspace experience.
           </p>
         </div>
 
