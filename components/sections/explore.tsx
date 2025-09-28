@@ -1,16 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 
 const workspaceAreas = [
   {
@@ -91,7 +83,13 @@ export function Explore() {
     setTimeout(() => setIsScanning(false), 2000);
   };
 
-  const propertyTypes = ["ALL", "HOUSE", "FARM", "FACTORY", "FLAT"];
+  const propertyTypes = [
+    "ALL",
+    "STUDIO",
+    "PRIVATE",
+    "CO-WORKING",
+    "EDITING SPACE",
+  ];
 
   const filteredAreas =
     selectedType === "ALL"

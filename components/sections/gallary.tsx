@@ -62,7 +62,7 @@ export function Gallery() {
   return (
     <section className="min-h-screen bg-background relative overflow-hidden py-20">
       <div className="text-center space-y-8 ">
-        <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="flex items-center justify-center gap-3 py-10">
           <Badge className="neon-border bg-primary/10 text-primary border-primary/30">
             📸 Visual Showcase • Workspace Gallery
           </Badge>
@@ -79,7 +79,7 @@ export function Gallery() {
       {/* Curved Carousel Section */}
       <div
         ref={carouselRef}
-        className="min-h-screen flex items-center justify-center px-8"
+        className=" flex items-center justify-center px-8 py-10"
       >
         <div className="relative w-full max-w-6xl pt-10">
           {/* Carousel Container with curved perspective */}

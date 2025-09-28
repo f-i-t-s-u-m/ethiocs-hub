@@ -51,6 +51,13 @@ export function Header() {
           >
             Contact
           </Button>
+
+          <Button
+            variant="ghost"
+            className="text-muted-foreground hover:text-primary hover:bg-primary/10 font-medium rounded-full px-6"
+          >
+            Events
+          </Button>
         </nav>
 
         {/* CTA Buttons */}
