@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronDown, Search, ShoppingCart, User } from "lucide-react";
+import { useState, useRef } from "react";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
 const artisticPanels = [
@@ -61,19 +60,28 @@ export function Gallery() {
   };
 
   return (
-    <section className="min-h-screen bg-background relative overflow-hidden">
-      {/* Grid background pattern */}
-      <div className="absolute inset-0 cyber-grid opacity-20"></div>
+    <section className="min-h-screen bg-background relative overflow-hidden py-20">
+      <div className="text-center space-y-8 ">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <Badge className="neon-border bg-primary/10 text-primary border-primary/30">
+            📸 Visual Showcase • Workspace Gallery
+          </Badge>
+        </div>
 
-      {/* Top bar */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-2 bg-foreground rounded-b-lg z-20"></div>
+        <h2 className="text-5xl md:text-7xl font-bold text-balance font-mono leading-tight">
+          <span className="block text-foreground">OUR GALLERY</span>
+          <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            WORKSPACE GALLERY
+          </span>
+        </h2>
+      </div>
 
       {/* Curved Carousel Section */}
       <div
         ref={carouselRef}
         className="min-h-screen flex items-center justify-center px-8"
       >
-        <div className="relative w-full max-w-6xl">
+        <div className="relative w-full max-w-6xl pt-10">
           {/* Carousel Container with curved perspective */}
           <div className="relative h-[600px] flex items-center justify-center perspective-1000">
             {artisticPanels.map((item, index) => {
@@ -141,7 +149,7 @@ export function Gallery() {
           {/* Navigation Arrows */}
           <button
             onClick={() => handleScroll("left")}
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 bg-background/90 hover:bg-background text-foreground border border-border p-4 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+            className="absolute left-8 top-1/2  -translate-y-1/2 z-20 bg-background/90 hover:bg-background text-foreground border border-border p-4 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
             disabled={isScrolling}
           >
             <svg
@@ -180,7 +188,7 @@ export function Gallery() {
           </button>
 
           {/* Dots Indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20 top-5">
             {artisticPanels.map((_, index) => (
               <button
                 key={index}
